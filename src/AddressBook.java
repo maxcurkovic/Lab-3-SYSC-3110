@@ -12,8 +12,12 @@ public class AddressBook {
         buddy.add(newBud);
     }
 
-    public void removeBuddy(BuddyInfo newBud){
-        buddy.remove(newBud);
+    public boolean removeBuddy(BuddyInfo newBud){
+        if (buddy.contains(newBud)){
+            buddy.remove(newBud);
+            return true;
+        }
+        return false;
     }
 
     public static void main(String[] args) {
