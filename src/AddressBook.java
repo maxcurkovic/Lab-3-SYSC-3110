@@ -13,16 +13,13 @@ public class AddressBook {
     }
 
     public boolean removeBuddy(BuddyInfo newBud){
-        if (buddy.contains(newBud)){
-            buddy.remove(newBud);
-            return true;
-        }
-        return false;
+        return buddy.remove(newBud);
     }
 
     public static void main(String[] args) {
         System.out.println("Address Book");
         BuddyInfo buddy = new BuddyInfo();
+        BuddyInfo thisIsOnlyaTest = new BuddyInfo();
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
         addressBook.removeBuddy(buddy);
